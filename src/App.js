@@ -46,6 +46,10 @@ const App = () => {
   setTask(newTask)
 
  }
+ const removeDone = (id) => {
+  const newGreen = green.filter((item) => item.id !== id)
+  setGreen(newGreen)
+ }
  useEffect(() => {
   localStorage.setItem('task', JSON.stringify(task))
  }, [task])
@@ -63,7 +67,7 @@ const App = () => {
        <div className="list-container" key={id}>
         <p className='done-text'>{title}</p>
 
-        <button onClick={() => deleteTask(id)}><FaTrash className='done-delete' /></button>
+        <button onClick={() => removeDone(id)}><FaTrash className='done-delete' /></button>
        </div>
       )
      })
