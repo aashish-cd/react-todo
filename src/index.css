@@ -23,6 +23,7 @@ body {
   justify-content: center;
   align-items: center;
   text-align: center;
+  width:60%;
 
   color: red;
 }
